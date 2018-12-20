@@ -21,6 +21,7 @@ class DateTimeFormField extends FormField<TimeOfDay> {
                       state.didChange(time);
                       //print(state.value);
                     },
+                    initTime: state.value,
                   ),
                   state.hasError
                       ? Padding(
@@ -75,11 +76,11 @@ class _CustomTimePicker extends State<CustomTimePicker> {
         children: <Widget>[
           new Icon(
             Icons.access_time,
-            size: 14.0,
+            size: 18.0,
             color: Colors.black,
           ),
           new Text(' ' + _currentTime.format(context),
-              style: new TextStyle(fontSize: 12.0, color: Colors.black))
+              style: new TextStyle(color: Colors.black))
         ],
       ),
     );

@@ -11,6 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
   intl: ^0.15.7
+  multi_image_picker:
+    path: ./../../multi_image_picker
 
 dev_dependencies:
   flutter_test:

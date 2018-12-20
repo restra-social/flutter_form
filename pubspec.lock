@@ -179,6 +179,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.6+2"
+  multi_image_picker:
+    dependency: "direct main"
+    description:
+      path: "../../multi_image_picker"
+      relative: true
+    source: path
+    version: "2.2.10"
   multi_server_socket:
     dependency: transitive
     description:
@@ -382,3 +389,4 @@ packages:
     version: "2.1.15"
 sdks:
   dart: ">=2.0.0 <3.0.0"
+  flutter: ">=0.1.4 <2.0.0"
