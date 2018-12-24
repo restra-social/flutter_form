@@ -22,15 +22,30 @@ class DropDownSelectFormField extends FormField<String> {
                 );
               }).toList();
 
-              return Padding(
-                  padding: EdgeInsets.only(top: 10.0),
-                  child: new DropdownButton<String>(
+              return DropdownButtonHideUnderline(
+                  child: InputDecorator(
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.zero,
+                  ),
+                  child: DropdownButton<String>(
                     hint: Text(hintText),
                     value: state.value,
                     items: _items,
                     onChanged: (String val) {
                       state.didChange(val);
                     },
-                  ));
+                  )
+              ));
+
+//              return Padding(
+//                  padding: EdgeInsets.only(top: 10.0),
+//                  child: new DropdownButton<String>(
+//                    hint: Text(hintText),
+//                    value: state.value,
+//                    items: _items,
+//                    onChanged: (String val) {
+//                      state.didChange(val);
+//                    },
+//                  ));
             });
 }
