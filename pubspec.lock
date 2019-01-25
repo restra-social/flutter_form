@@ -63,10 +63,10 @@ packages:
   multi_image_picker:
     dependency: "direct main"
     description:
-      path: "../../multi_image_picker"
-      relative: true
-    source: path
-    version: "2.3.26"
+      name: multi_image_picker
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.4.11"
   path:
     dependency: transitive
     description:
