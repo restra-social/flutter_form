@@ -1,26 +1,38 @@
+import 'dart:convert';
+import 'dart:typed_data';
+import 'package:flutter/services.dart';
+import 'package:async/async.dart';
 import 'package:flutter/material.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
+import 'package:flutter_form/elements/carosal.dart';
 
 class ImagePickerForm extends FormField<List<Asset>> {
-
   ImagePickerForm({
     FormFieldSetter<List<Asset>> onSaved,
     FormFieldValidator<List<Asset>> validator,
     List<Asset> initialValue = const <Asset>[],
     bool autovalidate = false,
-    Axis previewDirection = Axis.vertical,
-    double height = 150.0,
-    double width = 150.0
+    ImageProvider placeholder,
   }) : super(
             onSaved: onSaved,
             validator: validator,
             initialValue: initialValue,
             autovalidate: autovalidate,
             builder: (FormFieldState<List<Asset>> state) {
-              double singleMinWidthFactor = 0.7;
-
               Future<List<Asset>> getImage() async {
-                final _assets = await MultiImagePicker.pickImages(maxImages: 4);
+
+                List<Asset> _assets = List<Asset>();
+                try {
+                  _assets = await MultiImagePicker.pickImages(
+                    maxImages: 4,
+                    enableCamera: true,
+                    options: CupertinoOptions(takePhotoIcon: "chat"),
+                  );
+                } on PlatformException catch (e) {
+                  print(e.message);
+                }
+
+
                 for (var image in _assets) {
                   await image.requestThumbnail(400, 200, quality: 80);
                 }
@@ -31,88 +43,67 @@ class ImagePickerForm extends FormField<List<Asset>> {
                 return null;
               }
 
-              double uploaderWidthFactor = width;
-
-              Widget _previewImage = new Container();
+              List<Widget> _images = <Widget>[];
               final _itemCount = state.value.length;
               if (_itemCount > 0) {
                 // Add to list
-                var calcedWidth = width * (singleMinWidthFactor / _itemCount.toDouble()) - .2;
-                _previewImage = Column(
-                  children: new List.generate(
-                      _itemCount,
-                      (index) => Container(
-                          padding: EdgeInsets.only(top: 10.0),
-                          child: new Container(
-                            height: height,
-                            width: calcedWidth,
-                            decoration: new BoxDecoration(
-                                //color: Color(AppDecorator.PlaceholderColor),
-                                borderRadius: new BorderRadius.circular(5.0),
-                                image: new DecorationImage(
-                                  image: new MemoryImage(state
-                                      .value[index].thumbData.buffer
-                                      .asUint8List()),
-                                  fit: BoxFit.cover,
-                                )),
-                          ))).toList(),
-                );
-                uploaderWidthFactor = width - calcedWidth;
-              } else {
-                uploaderWidthFactor = width;
+                for (var index = 0; index < _itemCount; index++) {
+                  _images.add(Container(
+                    width: 380.0,
+                    margin: new EdgeInsets.all(5.0),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0)),
+                    child: SliderCard(
+                      memoryImage:
+                          state.value[index].thumbData.buffer.asUint8List(),
+                      placeholder: placeholder,
+                    ),
+                  ));
+                }
               }
-
-              return Column(
-                children: <Widget>[
-                  Wrap(
-                    direction: previewDirection,
-                    children: <Widget>[
-                      _previewImage,
-                      Container(
-                          width: uploaderWidthFactor,
-                          height: height,
-                          child: GestureDetector(
-                            onTap: () {
-                              var images = getImage();
-                              images.then((images) => state.didChange(images));
-                            },
-                            child: new Container(
-                                decoration: new BoxDecoration(
-                                    borderRadius:
-                                        new BorderRadius.circular(5.0),
-                                    color: Color(0x48e0e1e1)),
-                                width: width,
-                                height: height,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    new Center(
-                                      child: new Text(
-                                        "Upload an Image",
-                                      ),
-                                    ),
-                                    new Center(
-                                      child: new Text(
-                                        "(Optional)",
-                                      ),
-                                    ),
-                                  ],
-                                )),
-                          )),
-                    ],
-                  ),
-                  state.hasError
-                      ? Padding(
-                          padding: EdgeInsets.symmetric(vertical: 10.0),
-                          child: Text(
-                            state.errorText,
-                            style: TextStyle(color: Colors.red),
-                          ),
-                        )
-                      : Container()
-                ],
+              _images.add(GestureDetector(
+                  onTap: () {
+                    var images = getImage();
+                    images.then((images) => state.didChange(images));
+                  },
+                  child: ClipRRect(
+                    borderRadius:
+                        new BorderRadius.all(new Radius.circular(5.0)),
+                    child: Container(
+                      width: 550.0,
+                      child: Center(
+                        child: Text("Upload Image"),
+                      ),
+                      decoration: BoxDecoration(color: Color(0x88e0e1e1)),
+                    ),
+                  )));
+              return CarouselSlider(
+                items: _images,
+                //autoPlay: true,
+                viewportFraction: 0.8,
+                aspectRatio: 2.0,
               );
             });
+}
+
+class SliderCard extends StatelessWidget {
+  ImageProvider placeholder;
+  Uint8List memoryImage;
+  SliderCard({this.memoryImage, this.placeholder});
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return ClipRRect(
+        borderRadius: new BorderRadius.all(new Radius.circular(5.0)),
+        child: Container(
+          child: FadeInImage(
+            placeholder: placeholder,
+            image: MemoryImage(memoryImage),
+            fit: BoxFit.cover,
+          ),
+        ));
+  }
 }
 
 /*
