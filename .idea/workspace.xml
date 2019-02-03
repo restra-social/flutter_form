@@ -7,14 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dae4a330-98a2-4e8f-9746-362e60be6389" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/img/no-item-picture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/assets/img/no-item-picture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/elements/carosal.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_form.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_form.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/image_picker_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/image_picker_form.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/avater_picker_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/avater_picker_form.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -30,17 +24,21 @@
     <session id="1328911612">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="dart" value="10" />
+          <entry key="dart" value="11" />
           <entry key="gradle" value="1" />
           <entry key="xml" value="1" />
           <entry key="yaml" value="6" />
@@ -48,7 +46,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Dart" value="10" />
+          <entry key="Dart" value="11" />
           <entry key="Groovy" value="1" />
           <entry key="XML" value="1" />
           <entry key="YAML" value="6" />
@@ -56,7 +54,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dart" value="1174" />
+          <entry key="dart" value="1228" />
           <entry key="gradle" value="1" />
           <entry key="xml" value="1" />
           <entry key="yaml" value="72" />
@@ -64,7 +62,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dart" value="1174" />
+          <entry key="Dart" value="1228" />
           <entry key="Groovy" value="1" />
           <entry key="XML" value="1" />
           <entry key="YAML" value="72" />
@@ -79,8 +77,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="25" column="93" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="96" />
+                <state relative-caret-position="-14">
+                  <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -95,8 +93,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/image_picker_form.dart">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="427">
-                  <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+                <state relative-caret-position="202">
+                  <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#22#0" expanded="true" />
                   </folding>
@@ -158,10 +156,10 @@
         <option value="$PROJECT_DIR$/lib/elements/carosal.dart" />
         <option value="$PROJECT_DIR$/example/android/app/build.gradle" />
         <option value="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/example/lib/main.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/example/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/image_picker_form.dart" />
+        <option value="$PROJECT_DIR$/example/lib/main.dart" />
       </list>
     </option>
   </component>
@@ -176,59 +174,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="flutter_form" type="b2602c69:ProjectViewProjectNode" />
               <item name="flutter_form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_form" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_form" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_form" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_form" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_form" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_form" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flutter_form" type="b2602c69:ProjectViewProjectNode" />
@@ -244,6 +195,11 @@
             <path>
               <item name="flutter_form" type="b2602c69:ProjectViewProjectNode" />
               <item name="flutter_form" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_form" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -251,6 +207,8 @@
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,7 +278,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1057" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="977" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1682641" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -336,7 +294,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Dart Analysis" order="7" weight="0.32954547" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4983845" weight="0.25979844" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4983845" visible="true" weight="0.25875705" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5016155" side_tool="true" weight="0.33887467" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49919224" weight="0.37737963" />
@@ -490,8 +448,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="93" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="96" />
+        <state relative-caret-position="-14">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -500,8 +458,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/image_picker_form.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        <state relative-caret-position="202">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>

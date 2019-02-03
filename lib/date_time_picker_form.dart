@@ -72,15 +72,15 @@ class _CustomTimePicker extends State<CustomTimePicker> {
       onTap: () {
         _timePicker.pickTime(context);
       },
-      child: Padding(padding: EdgeInsets.symmetric(vertical: 5.0), child: new Row(
+      child: Padding(padding: EdgeInsets.symmetric(vertical: 15.0), child: new Row(
         children: <Widget>[
           new Icon(
             Icons.access_time,
-            size: 18.0,
+            size: 20.0,
             color: Colors.black,
           ),
           new Text(' ' + _currentTime.format(context),
-              style: new TextStyle(color: Colors.black))
+              style: new TextStyle(color: Colors.black, fontSize: 16.0))
         ],
       ),)
     );

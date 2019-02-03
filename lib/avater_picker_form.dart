@@ -40,7 +40,7 @@ class AvatarPickerForm extends FormField<ImageProvider> {
                       width: 100.0,
                       decoration: BoxDecoration(
                           image: new DecorationImage(
-                            image: state.value,
+                            image: state.value ?? initialValue,
                             fit: BoxFit.cover,
                           ),
                           shape: BoxShape.circle,
