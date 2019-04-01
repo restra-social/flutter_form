@@ -7,7 +7,7 @@ class AvatarPickerForm extends FormField<ImageProvider> {
     final _assets = await MultiImagePicker.pickImages(
       maxImages: 1,
       enableCamera: true,
-      options: CupertinoOptions(takePhotoIcon: "chat"),
+      cupertinoOptions: CupertinoOptions(takePhotoIcon: "chat"),
     );
     for (var image in _assets) {
       await image.requestThumbnail(400, 200, quality: 80);

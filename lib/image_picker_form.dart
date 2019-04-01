@@ -26,7 +26,7 @@ class ImagePickerForm extends FormField<List<Asset>> {
                   _assets = await MultiImagePicker.pickImages(
                     maxImages: 4,
                     enableCamera: true,
-                    options: CupertinoOptions(takePhotoIcon: "chat"),
+                    cupertinoOptions: CupertinoOptions(takePhotoIcon: "chat"),
                   );
                 } on PlatformException catch (e) {
                   print(e.message);
