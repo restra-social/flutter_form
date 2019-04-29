@@ -1,10 +1,7 @@
-import 'dart:convert';
-import 'dart:typed_data';
 import 'package:flutter/services.dart';
-import 'package:async/async.dart';
 import 'package:flutter/material.dart';
-import 'package:multi_image_picker/multi_image_picker.dart';
 import 'package:flutter_form/elements/carosal.dart';
+import 'package:multi_image_picker/multi_image_picker.dart';
 
 class ImagePickerForm extends FormField<List<Asset>> {
   ImagePickerForm({
@@ -54,8 +51,7 @@ class ImagePickerForm extends FormField<List<Asset>> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0)),
                     child: SliderCard(
-                      memoryImage:
-                          state.value[index].thumbData.buffer.asUint8List(),
+                      memoryImage: state.value[index],
                       placeholder: placeholder,
                     ),
                   ));
@@ -88,7 +84,7 @@ class ImagePickerForm extends FormField<List<Asset>> {
 
 class SliderCard extends StatelessWidget {
   ImageProvider placeholder;
-  Uint8List memoryImage;
+  Asset memoryImage;
   SliderCard({this.memoryImage, this.placeholder});
 
   @override
@@ -99,7 +95,7 @@ class SliderCard extends StatelessWidget {
         child: Container(
           child: FadeInImage(
             placeholder: placeholder,
-            image: MemoryImage(memoryImage),
+            image: AssetThumbImageProvider(memoryImage),
             fit: BoxFit.cover,
           ),
         ));

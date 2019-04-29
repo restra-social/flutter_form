@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:multi_image_picker/multi_image_picker.dart';
 import 'package:flutter/services.dart';
+import 'package:multi_image_picker/multi_image_picker.dart';
 
 class AvatarPickerForm extends FormField<ImageProvider> {
   static Future<ImageProvider> getImage() async {
@@ -14,7 +14,7 @@ class AvatarPickerForm extends FormField<ImageProvider> {
     }
 
     if (_assets.length > 0) {
-      return MemoryImage(_assets[0].thumbData.buffer.asUint8List());
+      return AssetThumbImageProvider(_assets[0]);
     }
     return null;
   }
